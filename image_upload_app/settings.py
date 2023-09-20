@@ -146,3 +146,4 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = "image_drf_app.CustomUser"
+

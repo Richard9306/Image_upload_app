@@ -5,18 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a06dbc-d620-4ec7-8c76-33a59c673721" name="Changes" comment="rename the README">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_drf_app/migrations/0004_images_thumbnail_200_images_thumbnail_400.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5c5e357069e1c31ffbd85afbbdf75941083433da" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/c/5c5e357069e1c31ffbd85afbbdf75941083433da" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_drf_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_drf_app/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image_drf_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_drf_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_drf_app/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_drf_app/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_drf_app/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_drf_app/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image_drf_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_drf_app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image_drf_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_drf_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image_upload_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_upload_app/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
