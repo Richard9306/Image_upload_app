@@ -1,7 +1,7 @@
 # Image_upload_app
 
 ## Table of contents
-* [Technologies used](#technologies used)
+* [Technologies used](#technologies-used)
 * [Setup](#setup)
 * [Author](#author)
 

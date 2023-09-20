@@ -6,3 +6,7 @@ class CustomUserSerializer(serializers.HyperlinkedModelSerializer):
         model = CustomUser
         fields = ["id", "username", "status", "img_uploaded"]
 
+
+
+class ImageUploadSerializer(serializers.Serializer):
+    image = serializers.ImageField()
