@@ -1,15 +1,12 @@
-from django.urls import path, include
-from rest_framework import routers
-from .views import CustomUserViewSet, ImageUploadViewSet
+from django.urls import path
 
-router = routers.DefaultRouter()
-router.register(r"user", CustomUserViewSet)
+from .views import UserList, UserDetail, ImageList, ImageDetail, ExpiringLinkView
 
-router.register(r'images', ImageUploadViewSet, basename='image-upload')
-urlpatterns = router.urls
 
 urlpatterns = [
-    path('user/', include(router.urls)),
-    path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
-    # path('upload/', ImageView.as_view(), name='image-upload'),
+    path('user/', UserList.as_view()),
+    path('user/<int:pk>/', UserDetail.as_view()),
+    path('image/', ImageList.as_view()),
+    path('image/<int:pk>/', ImageDetail.as_view()),
+    path('expiring-link/', ExpiringLinkView.as_view())
 ]

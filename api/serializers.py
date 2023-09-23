@@ -1,11 +1,27 @@
-from .models import CustomUser, Images
+from .models import CustomUser, Images, Tiers, ExpiringLink
 from rest_framework import serializers
 
-class CustomUserSerializer(serializers.HyperlinkedModelSerializer):
+
+class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        fields = ["id", "username", "status", "img_uploaded"]
+        fields = ('__all__')
 
 
-class ImageUploadSerializer(serializers.Serializer):
-    image = serializers.ImageField()
+class ImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Images
+        fields = ('__all__')
+
+
+
+class TierSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tiers
+        fields = ('__all__')
+
+
+class ExpiringLinkSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ExpiringLink
+        fields = ('__all__')
