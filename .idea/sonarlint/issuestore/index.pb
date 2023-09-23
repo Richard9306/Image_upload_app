@@ -8,7 +8,13 @@ S
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-4
-.env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
+@
+requirements.txt,1\9\19359a61ae2446b51b549167b014da2fcf265768
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+u
+Eimage_drf_app/migrations/0003_alter_customuser_img_uploaded_images.py,f\3\f33d204a4ce3466ed66a7fcccae5a5c10c5de672
+z
+Jimage_drf_app/migrations/0004_images_thumbnail_200_images_thumbnail_400.py,9\8\9829ca71711c2ee4efac6eb97296dc7592a513ae
 F
 image_drf_app/forms.py,a\9\a9678a056aa706134831f55f58040d25ad0e7f79

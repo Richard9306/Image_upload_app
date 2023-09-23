@@ -35,7 +35,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "image_drf_app",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -43,8 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-
-
+    "api",
 ]
 
 MIDDLEWARE = [
@@ -145,5 +143,5 @@ REST_FRAMEWORK = {
     ]
 }
 
-AUTH_USER_MODEL = "image_drf_app.CustomUser"
+AUTH_USER_MODEL = "api.CustomUser"
 
