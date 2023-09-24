@@ -4,15 +4,14 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('api', '0005_tiers_remove_customuser_img_uploaded_and_more'),
+        ("api", "0005_tiers_remove_customuser_img_uploaded_and_more"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='tiers',
-            old_name='name',
-            new_name='tier_type',
+            model_name="tiers",
+            old_name="name",
+            new_name="tier_type",
         ),
     ]

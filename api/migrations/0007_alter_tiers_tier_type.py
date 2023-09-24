@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('api', '0006_rename_name_tiers_tier_type'),
+        ("api", "0006_rename_name_tiers_tier_type"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='tiers',
-            name='tier_type',
+            model_name="tiers",
+            name="tier_type",
             field=models.CharField(max_length=30),
         ),
     ]

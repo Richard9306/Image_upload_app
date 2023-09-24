@@ -4,20 +4,19 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('api', '0003_alter_customuser_img_uploaded_images'),
+        ("api", "0003_alter_customuser_img_uploaded_images"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='images',
-            name='thumbnail_200',
-            field=models.ImageField(blank=True, null=True, upload_to='thumbnails_200/'),
+            model_name="images",
+            name="thumbnail_200",
+            field=models.ImageField(blank=True, null=True, upload_to="thumbnails_200/"),
         ),
         migrations.AddField(
-            model_name='images',
-            name='thumbnail_400',
-            field=models.ImageField(blank=True, null=True, upload_to='thumbnails_400/'),
+            model_name="images",
+            name="thumbnail_400",
+            field=models.ImageField(blank=True, null=True, upload_to="thumbnails_400/"),
         ),
     ]

@@ -4,14 +4,13 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('api', '0009_alter_tiers_tier_type'),
+        ("api", "0009_alter_tiers_tier_type"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='images',
-            name='description',
+            model_name="images",
+            name="description",
         ),
     ]

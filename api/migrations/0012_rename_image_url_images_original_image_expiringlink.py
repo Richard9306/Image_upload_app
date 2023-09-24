@@ -5,24 +5,36 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('api', '0011_rename_creator_images_user'),
+        ("api", "0011_rename_creator_images_user"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='images',
-            old_name='image_url',
-            new_name='original_image',
+            model_name="images",
+            old_name="image_url",
+            new_name="original_image",
         ),
         migrations.CreateModel(
-            name='ExpiringLink',
+            name="ExpiringLink",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('expiration_time', models.PositiveIntegerField()),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('uploaded_image', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='api.images')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("expiration_time", models.PositiveIntegerField()),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                (
+                    "uploaded_image",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="api.images"
+                    ),
+                ),
             ],
         ),
     ]

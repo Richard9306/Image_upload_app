@@ -5,26 +5,46 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('api', '0004_images_thumbnail_200_images_thumbnail_400'),
+        ("api", "0004_images_thumbnail_200_images_thumbnail_400"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Tiers',
+            name="Tiers",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(choices=[('basic', 'Basic'), ('premium', 'Premium'), ('enterprise', 'Enterprise')], default='basic', max_length=30)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "name",
+                    models.CharField(
+                        choices=[
+                            ("basic", "Basic"),
+                            ("premium", "Premium"),
+                            ("enterprise", "Enterprise"),
+                        ],
+                        default="basic",
+                        max_length=30,
+                    ),
+                ),
             ],
         ),
         migrations.RemoveField(
-            model_name='customuser',
-            name='img_uploaded',
+            model_name="customuser",
+            name="img_uploaded",
         ),
         migrations.AlterField(
-            model_name='customuser',
-            name='status',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='api.tiers'),
+            model_name="customuser",
+            name="status",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE, to="api.tiers"
+            ),
         ),
     ]

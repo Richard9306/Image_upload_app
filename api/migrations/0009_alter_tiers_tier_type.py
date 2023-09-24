@@ -4,15 +4,22 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('api', '0008_alter_customuser_status'),
+        ("api", "0008_alter_customuser_status"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='tiers',
-            name='tier_type',
-            field=models.CharField(choices=[('basic', 'Basic'), ('premium', 'Premium'), ('enterprise', 'Enterprise')], default='basic', max_length=30),
+            model_name="tiers",
+            name="tier_type",
+            field=models.CharField(
+                choices=[
+                    ("basic", "Basic"),
+                    ("premium", "Premium"),
+                    ("enterprise", "Enterprise"),
+                ],
+                default="basic",
+                max_length=30,
+            ),
         ),
     ]
