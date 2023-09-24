@@ -26,12 +26,8 @@ class Images(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     title = models.CharField(max_length=80, blank=False, null=False)
     original_image = models.ImageField(upload_to="images/", blank=False, null=False)
-    thumbnail_200 = models.ImageField(
-        upload_to="thumbnails_200/", blank=True, null=True
-    )
-    thumbnail_400 = models.ImageField(
-        upload_to="thumbnails_400/", blank=True, null=True
-    )
+    thumbnail_200 = models.ImageField(upload_to="thumbnails_200/", blank=True, null=True)
+    thumbnail_400 = models.ImageField(upload_to="thumbnails_400/", blank=True, null=True)
 
     def __str__(self):
         return self.title

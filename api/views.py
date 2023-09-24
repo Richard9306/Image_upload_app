@@ -5,12 +5,11 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from PIL import Image
 from io import BytesIO
-import tempfile
-from .models import CustomUser, Tiers, Images, ExpiringLink
+from django.core.files import File
+from .models import CustomUser, Images, ExpiringLink
 from .serializers import (
     CustomUserSerializer,
     ImageUploadSerializer,
-    TierSerializer,
     ExpiringLinkSerializer,
 )
 
@@ -25,7 +24,7 @@ class UserDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = CustomUser.objects.all()
 
 
-class ImageDetail(generics.RetrieveAPIView):
+class ImageDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ImageUploadSerializer
     permission_classes = [IsAuthenticated]
     queryset = Images.objects.all()
@@ -47,13 +46,9 @@ class ImageUploadAndThumbnailView(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         # Associate the uploaded image with the authenticated user
         serializer.save(user=self.request.user)
-
-        # Generate thumbnails based on the user's account tier
         user_account = self.request.user.status
         image_instance = serializer.instance
-
         if user_account:
-            # Customize thumbnail heights based on account tier settings
             if user_account.tier_type == "basic":
                 thumbnail_heights = [200]
             elif user_account.tier_type == "premium":
@@ -71,22 +66,13 @@ class ImageUploadAndThumbnailView(generics.ListCreateAPIView):
     def generate_thumbnail(self, image_field, height):
         img = Image.open(image_field)
         img.load()
-        # Resize the image to the specified height while keeping the width constant
-        img.thumbnail((img.width, height), Image.LANCZOS)
         thumbnail_buffer = BytesIO()
+        img.thumbnail((img.width, height), Image.LANCZOS)
         img = img.convert("RGB")
         img.save(thumbnail_buffer, format="PNG")
-        thumbnail_data = thumbnail_buffer.getvalue()
+        thumbnail_file = File(img)
         thumbnail_buffer.close()
-        # Create a temporary in-memory file and assign it to the image field
-        with tempfile.NamedTemporaryFile(delete=True) as temp_file:
-            temp_file.write(thumbnail_data)
-            temp_file.flush()
-            print(image_field.name)
-            # image_field.name = image_field.name.rstrip(".png") + f'_thumbnail_{height}.jpg'  # Assign a unique name
-            image_field.file = temp_file
-
-        return img  # Return the modified image field
+        return thumbnail_file
 
 
 class ExpiringLinkView(generics.ListCreateAPIView):
@@ -153,6 +139,3 @@ class RetrieveExpiringLinkView(generics.RetrieveAPIView):
             )
 
         return Response(ExpiringLinkSerializer(expiring_link).data)
-
-
-
