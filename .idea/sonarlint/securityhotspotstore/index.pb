@@ -7,8 +7,6 @@ S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 @
 requirements.txt,1\9\19359a61ae2446b51b549167b014da2fcf265768
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 ;
 api/apps.py,9\a\9a8032ee9d0071a4b4f5bddb03125d8236020c01
 N
@@ -28,3 +26,8 @@ B
 api/admin.py,8\a\8ae82313a6064cfbe647375b277f589af65b1caf
 <
 api/forms.py,f\3\f34f0d8a1e7e005590032f90d85ed83bbacf465d
+H
+image_upload_app/urls.py,6\a\6a4cd90f0d922537d22eebcc7b87329aa8c6c255
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
