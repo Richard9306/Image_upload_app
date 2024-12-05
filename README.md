@@ -19,7 +19,7 @@ Project requirements/dependencies are listed in the [requirements.txt](requireme
 3. Start project's containers `docker-compose up`
 
 ## Project status
-Project is:  _in progress_
+Project is:  _on hold_
 
 ## Author
 Ryszard Najewski [ryszard.najewski@gmail.com](mailto:ryszard.najewski@gmail.com)
